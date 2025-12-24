@@ -1,0 +1,395 @@
+{
+  "test_metadata": {
+    "timestamp": "2025-12-25T04:41:33.680278",
+    "total_runs": 2,
+    "bureau_file": "JEET_ARORA_PARK251217CR671901414.pdf",
+    "gst_file": "GSTR3B_06AAICK4577H1Z8_012025.pdf"
+  },
+  "consistency_metrics": {
+    "bureau_credit_score": {
+      "total_extractions": 2,
+      "unique_values": 1,
+      "most_common_value": 627,
+      "most_common_count": 2,
+      "consistency_rate": 100.0,
+      "all_values": {
+        "627": 2
+      }
+    },
+    "bureau_overdue_threshold": {
+      "total_extractions": 2,
+      "unique_values": 1,
+      "most_common_value": 5312886,
+      "most_common_count": 2,
+      "consistency_rate": 100.0,
+      "all_values": {
+        "5312886": 2
+      }
+    },
+    "bureau_settlement_writeoff": {
+      "total_extractions": 2,
+      "unique_values": 2,
+      "most_common_value": "Considerably high number of self/overall loans disbursed in the recent past",
+      "most_common_count": 1,
+      "consistency_rate": 50.0,
+      "all_values": {
+        "Considerably high number of self/overall loans disbursed in the recent past": 1,
+        "0": 1
+      }
+    },
+    "bureau_suit_filed": {
+      "total_extractions": 2,
+      "unique_values": 2,
+      "most_common_value": false,
+      "most_common_count": 1,
+      "consistency_rate": 50.0,
+      "all_values": {
+        "false": 1,
+        "No Suit filed": 1
+      }
+    },
+    "bureau_written_off_debt_amount": {
+      "total_extractions": 2,
+      "unique_values": 2,
+      "most_common_value": "0",
+      "most_common_count": 1,
+      "consistency_rate": 50.0,
+      "all_values": {
+        "0": 1,
+        "0": 1
+      }
+    },
+    "bureau_loan_amount_threshold": {
+      "total_extractions": 2,
+      "unique_values": 1,
+      "most_common_value": 13000000,
+      "most_common_count": 2,
+      "consistency_rate": 100.0,
+      "all_values": {
+        "13000000": 2
+      }
+    },
+    "bureau_credit_inquiries": {
+      "total_extractions": 2,
+      "unique_values": 1,
+      "most_common_value": 0,
+      "most_common_count": 2,
+      "consistency_rate": 100.0,
+      "all_values": {
+        "0": 2
+      }
+    },
+    "bureau_max_active_loans": {
+      "total_extractions": 2,
+      "unique_values": 2,
+      "most_common_value": 20,
+      "most_common_count": 1,
+      "consistency_rate": 50.0,
+      "all_values": {
+        "20": 1,
+        "10": 1
+      }
+    },
+    "gst_sales": {
+      "total_extractions": 2,
+      "unique_values": 1,
+      "most_common_value": "[{\"month\": \"January 2025\", \"sales\": 951381, \"source\": \"GSTR-3B Table 3.1(a)\"}]",
+      "most_common_count": 2,
+      "consistency_rate": 100.0,
+      "all_values": {
+        "[{\"month\": \"January 2025\", \"sales\": 951381, \"source\": \"GSTR-3B Table 3.1(a)\"}]": 2
+      }
+    }
+  },
+  "accuracy_metrics": {
+    "total_parameters": 16,
+    "correct": 10,
+    "incorrect": 6,
+    "missing": 0,
+    "overall_accuracy": 62.5,
+    "per_parameter": {
+      "bureau_dpd_30": {
+        "expected": null,
+        "extracted": null,
+        "correct": true,
+        "consistency_rate": 100.0
+      },
+      "bureau_wilful_default": {
+        "expected": null,
+        "extracted": null,
+        "correct": true,
+        "consistency_rate": 100.0
+      },
+      "bureau_overdue_threshold": {
+        "expected": 53270046,
+        "extracted": 5312886,
+        "correct": false,
+        "consistency_rate": 100.0
+      },
+      "bureau_suit_filed": {
+        "expected": false,
+        "extracted": false,
+        "correct": true,
+        "consistency_rate": 50.0
+      },
+      "bureau_dpd_90": {
+        "expected": null,
+        "extracted": null,
+        "correct": true,
+        "consistency_rate": 100.0
+      },
+      "gst_sales": {
+        "expected": [
+          {
+            "month": "January 2025",
+            "sales": 951381
+          }
+        ],
+        "extracted": [
+          {
+            "month": "January 2025",
+            "sales": 951381,
+            "source": "GSTR-3B Table 3.1(a)"
+          }
+        ],
+        "correct": false,
+        "consistency_rate": 100.0
+      },
+      "bureau_credit_score": {
+        "expected": 627,
+        "extracted": 627,
+        "correct": true,
+        "consistency_rate": 100.0
+      },
+      "bureau_credit_inquiries": {
+        "expected": 13,
+        "extracted": 0,
+        "correct": false,
+        "consistency_rate": 100.0
+      },
+      "bureau_max_active_loans": {
+        "expected": 25,
+        "extracted": 20,
+        "correct": false,
+        "consistency_rate": 50.0
+      },
+      "bureau_ntc_accepted": {
+        "expected": null,
+        "extracted": null,
+        "correct": true,
+        "consistency_rate": 100.0
+      },
+      "bureau_written_off_debt_amount": {
+        "expected": "0",
+        "extracted": "0",
+        "correct": true,
+        "consistency_rate": 50.0
+      },
+      "bureau_max_loans": {
+        "expected": null,
+        "extracted": null,
+        "correct": true,
+        "consistency_rate": 100.0
+      },
+      "bureau_settlement_writeoff": {
+        "expected": "0",
+        "extracted": "Considerably high number of self/overall loans disbursed in the recent past",
+        "correct": false,
+        "consistency_rate": 50.0
+      },
+      "bureau_loan_amount_threshold": {
+        "expected": 42300000,
+        "extracted": 13000000,
+        "correct": false,
+        "consistency_rate": 100.0
+      },
+      "bureau_dpd_60": {
+        "expected": null,
+        "extracted": null,
+        "correct": true,
+        "consistency_rate": 100.0
+      },
+      "bureau_no_live_pl_bl": {
+        "expected": null,
+        "extracted": null,
+        "correct": true,
+        "consistency_rate": 100.0
+      }
+    },
+    "correct_params": [
+      "bureau_dpd_30",
+      "bureau_wilful_default",
+      "bureau_suit_filed",
+      "bureau_dpd_90",
+      "bureau_credit_score",
+      "bureau_ntc_accepted",
+      "bureau_written_off_debt_amount",
+      "bureau_max_loans",
+      "bureau_dpd_60",
+      "bureau_no_live_pl_bl"
+    ],
+    "incorrect_params": [
+      "bureau_overdue_threshold",
+      "gst_sales",
+      "bureau_credit_inquiries",
+      "bureau_max_active_loans",
+      "bureau_settlement_writeoff",
+      "bureau_loan_amount_threshold"
+    ],
+    "missing_params": []
+  },
+  "all_runs": [
+    {
+      "run_number": 1,
+      "timestamp": "2025-12-25T04:37:40.170396",
+      "result": {
+        "bureau": {
+          "bureau_credit_score": {
+            "value": 627,
+            "source": "CRIF Report \u2013 Score Section"
+          },
+          "bureau_ntc_accepted": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_overdue_threshold": {
+            "value": 5312886,
+            "source": "Account Information, Row 25"
+          },
+          "bureau_dpd_30": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_dpd_60": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_dpd_90": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_settlement_writeoff": {
+            "value": "Considerably high number of self/overall loans disbursed in the recent past",
+            "source": "CRIF HM Score(s) Table - PREFORM CONSUMER 2.2, Scoring Factors"
+          },
+          "bureau_no_live_pl_bl": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_suit_filed": {
+            "value": false,
+            "source": "Account Information - Account Remarks, Row 3"
+          },
+          "bureau_wilful_default": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_written_off_debt_amount": {
+            "value": "0",
+            "source": "Account Information Table - Total Writeoff Amt column, Row 1"
+          },
+          "bureau_max_loans": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_loan_amount_threshold": {
+            "value": 13000000,
+            "source": "Account Information, Row 23"
+          },
+          "bureau_credit_inquiries": {
+            "value": 0,
+            "source": "Inquiries (past 24 months) section"
+          },
+          "bureau_max_active_loans": {
+            "value": 20,
+            "source": "Chunk 4, Page 0, Active Loans Section"
+          }
+        },
+        "gst_sales": [
+          {
+            "month": "January 2025",
+            "sales": 951381,
+            "source": "GSTR-3B Table 3.1(a)"
+          }
+        ],
+        "confidence_score": 0.82
+      }
+    },
+    {
+      "run_number": 2,
+      "timestamp": "2025-12-25T04:41:33.472953",
+      "result": {
+        "bureau": {
+          "bureau_credit_score": {
+            "value": 627,
+            "source": "CRIF Report \u2013 Score Section"
+          },
+          "bureau_ntc_accepted": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_overdue_threshold": {
+            "value": 5312886,
+            "source": "Account Information, Row 25"
+          },
+          "bureau_dpd_30": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_dpd_60": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_dpd_90": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_settlement_writeoff": {
+            "value": "0",
+            "source": "Account Information Table - Settlement Amt column, Rows 1-5"
+          },
+          "bureau_no_live_pl_bl": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_suit_filed": {
+            "value": "No Suit filed",
+            "source": "Account Information - Account 03"
+          },
+          "bureau_wilful_default": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_written_off_debt_amount": {
+            "value": 0,
+            "source": "Account Summary Table - Total Amount Overdue column, Row 1"
+          },
+          "bureau_max_loans": {
+            "value": null,
+            "status": "not_found"
+          },
+          "bureau_loan_amount_threshold": {
+            "value": 13000000,
+            "source": "Account Information, Row 23"
+          },
+          "bureau_credit_inquiries": {
+            "value": 0,
+            "source": "Inquiries (past 24 months) section"
+          },
+          "bureau_max_active_loans": {
+            "value": 10,
+            "source": "Chunk 4, Page 0, Active Loans Section"
+          }
+        },
+        "gst_sales": [
+          {
+            "month": "January 2025",
+            "sales": 951381,
+            "source": "GSTR-3B Table 3.1(a)"
+          }
+        ],
+        "confidence_score": 0.82
+      }
+    }
+  ]
+}

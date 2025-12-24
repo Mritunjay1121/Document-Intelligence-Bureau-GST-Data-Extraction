@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+openai
+pdfplumber
+pandas
+openpyxl
+numpy
+loguru
+python-dotenv
+tenacity
+pytest
+httpx
+python-multipart
+PyMuPDF
+aiohttp
