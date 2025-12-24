@@ -571,3 +571,16 @@ Overall Accuracy: 93.33%
 
 ✅ Report saved to: quick_test_report.json
 ```
+
+
+### DEPLOYED IN HUGGINGFACE SPACES . PLEASE DO HAVE A TEST :
+
+#### HUGGINGFACE REPO :
+
+```
+https://huggingface.co/spaces/datasciencesage/Document-Intelligence-Bureau-GST-Data-Extraction
+```
+
+#### USE BELOW FOR TESTING :
+
+Deployed on HUGGINGFACE SPACES : [Deployed](https://datasciencesage-document-intelligence-bureau-gst-1d67cbb.hf.space)
